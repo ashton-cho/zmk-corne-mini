@@ -62,84 +62,24 @@
     combos {
         compatible = "zmk,combos";
 
-        escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <0 1>;
-        };
-
         delete {
             bindings = <&kp DELETE>;
-            key-positions = <10 11>;
-        };
-
-        perc {
-            bindings = <&kp PERCENT>;
-            key-positions = <5 17>;
-        };
-
-        equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <28 16>;
-        };
-
-        dollar {
-            bindings = <&kp DOLLAR>;
-            key-positions = <4 16>;
-        };
-
-        pound {
-            bindings = <&kp POUND>;
-            key-positions = <3 15>;
-        };
-
-        at {
-            bindings = <&kp AT>;
-            key-positions = <2 14>;
+            key-positions = <9 8>;
         };
 
         backslash {
             bindings = <&kp BACKSLASH>;
-            key-positions = <26 14>;
-        };
-
-        copy {
-            bindings = <&kp K_COPY>;
-            key-positions = <28 27>;
-        };
-
-        paste {
-            bindings = <&kp K_PASTE>;
-            key-positions = <26 27>;
-        };
-
-        star {
-            bindings = <&kp STAR>;
-            key-positions = <8 20>;
+            key-positions = <21 34>;
         };
 
         slash {
             bindings = <&kp SLASH>;
-            key-positions = <32 20>;
-        };
-
-        plus {
-            bindings = <&kp PLUS>;
-            key-positions = <7 19>;
-        };
-
-        minus {
-            bindings = <&kp KP_MINUS>;
-            key-positions = <31 19>;
-        };
-
-        underscore {
-            bindings = <&kp UNDER>;
-            key-positions = <30 18>;
+            key-positions = <20 31>;
         };
 
         leftbrack {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <31 32>;
+            key-positions = <31 26 27>;
         };
 
         rightbrack {
@@ -149,12 +89,37 @@
 
         para-less {
             bindings = <&paraless>;
-            key-positions = <20 19>;
+            key-positions = <25 26>;
         };
 
         para-great {
             bindings = <&paragreat>;
-            key-positions = <20 21>;
+            key-positions = <33 34>;
+        };
+
+        leftbrace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <28 27>;
+        };
+
+        rightbrace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <31 32>;
+        };
+
+        leftpar {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <29 28>;
+        };
+
+        rightpar {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <30 31>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <3 2>;
         };
     };
 
@@ -173,15 +138,15 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB    &kp Q       &kp W        &kp E       &kp R        &kp T        &kp Y    &kp U        &kp I          &kp O        &kp P          &kp BACKSPACE
-&kp LSHFT  &hm LGUI A  &hm LSHFT S  &hm LALT D  &hm LCTRL F  &kp G        &kp H    &hm RCTRL J  &hm RALT K     &hm RSHFT L  &hm RGUI SEMI  &kp SQT
-&kp LCTRL  &kp Z       &kp X        &kp C       &kp V        &kp B        &kp N    &kp M        &kp COMMA      &kp DOT      &kp FSLH       &kp RSHFT
-                                    &kp LGUI    &mo 1        &kp SPACE    &kp RET  &lt 2 TAB    &kp BACKSPACE
+&trans  &kp Q       &kp W       &kp E         &kp R        &kp T         &kp Y      &kp U        &kp I          &kp O       &kp P          &trans
+&trans  &hm LGUI A  &hm LALT S  &hm LSHIFT D  &hm LCTRL F  &kp G         &kp H      &hm RCTRL J  &hm RSHFT K    &hm RALT L  &hm RGUI SEMI  &trans
+&trans  &kp Z       &kp X       &kp C         &kp V        &kp B         &kp N      &kp M        &kp COMMA      &kp DOT     &kp FSLH       &trans
+                                &kp LEFT_GUI  &lt 1 CAPS   &kp RETURN    &kp SPACE  &lt 2 TAB    &kp BACKSPACE
             >;
         };
 
-        NAV {
-            display-name = "Nav";
+        SYM {
+            display-name = "Sym";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
@@ -190,15 +155,15 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &kp N1       &kp N2        &kp N3             &kp N4           &kp N5           &kp N6   &kp N7        &kp N8       &kp N9        &kp N0            &trans
-&trans  &hm LGUI N0  &hm LSHFT N4  &hm LALT UP_ARROW  &hm LCTRL DEL    &kp PAGE_UP      &kp N0   &hm RCTRL N4  &hm RALT N5  &hm RSHFT N6  &hm RGUI PAGE_UP  &trans
-&trans  &trans       &kp LEFT      &kp DOWN           &kp RIGHT_ARROW  &kp PAGE_DOWN    &trans   &kp N1        &kp N2       &kp N3        &kp PAGE_DOWN     &trans
-                                   &kp LGUI           &trans           &kp SPACE        &kp RET  &trans        &trans
+&trans  &kp N1                &kp N2            &kp N3          &kp N4             &kp N5                  &kp N6                 &kp N7               &kp N8              &kp N9                  &kp N0         &trans
+&trans  &hm LGUI EXCLAMATION  &hm LALT AT_SIGN  &hm LSHFT HASH  &hm LCTRL DOLLAR   &kp PERCENT             &kp CARET              &hm RCTRL AMPERSAND  &hm RSHFT ASTERISK  &hm RIGHT_ALT KP_MINUS  &hm RGUI PLUS  &trans
+&trans  &kp TILDE             &kp GRAVE         &kp APOSTROPHE  &kp DOUBLE_QUOTES  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp BACKSLASH        &kp PIPE            &kp UNDERSCORE          &kp KP_EQUAL   &trans
+                                                &kp LGUI        &trans             &kp RETURN              &kp SPACE              &trans               &kp BACKSPACE
             >;
         };
 
-        SYM {
-            display-name = "Sym";
+        NAV {
+            display-name = "Nav";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
@@ -207,20 +172,20 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL          &kp AT          &kp HASH           &kp DLLR         &kp PRCNT    &kp CARET  &kp AMPS         &kp ASTRK      &kp LEFT_PARENTHESIS  &kp RPAR       &trans
-&trans  &kp LEFT_BRACKET  &trans          &hm LALT UP_ARROW  &hm LCTRL SQT    &kp GRAVE    &kp MINUS  &hm RCTRL EQUAL  &hm RALT LBKT  &hm RSHFT RBKT        &hm RGUI BSLH  &trans
-&trans  &trans            &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &kp TILDE    &kp UNDER  &kp PLUS         &kp LBRC       &kp RBRC              &kp PIPE       &trans
-                                          &kp LGUI           &trans           &kp SPACE    &kp RET    &trans           &trans
+&trans  &none         &none         &kp ESCAPE      &kp INSERT   &none         &none      &kp HOME          &kp PAGE_DOWN      &kp PAGE_DOWN   &kp END          &trans
+&trans  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL    &none         &none      &kp LEFT          &kp DOWN           &kp UP          &kp RIGHT        &trans
+&trans  &kp K_UNDO    &kp K_CUT     &kp K_COPY      &kp K_PASTE  &kp K_REDO    &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans
+                                    &kp DELETE      &trans       &kp ENTER     &kp SPACE  &trans            &kp BACKSPACE
             >;
         };
 
         ADJ {
             display-name = "System";
             bindings = <
-&trans  &kp F1        &kp F2         &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans
-&trans  &hm LGUI F11  &hm LSHFT F12  &trans        &trans      &studio_unlock    &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &bootloader  &trans
-                                     &trans        &trans      &trans            &trans  &trans  &trans
+&trans  &kp F1        &kp F2         &kp F3          &kp F4            &kp F5          &kp F6      &kp F7             &kp F8           &kp F9          &kp F10       &trans
+&trans  &hm LGUI F11  &hm LSHFT F12  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT      &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_BRI_DN    &kp C_BRI_UP  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3      &bt BT_SEL 4    &bt BT_CLR  &bt BT_CLR_ALL     &trans           &studio_unlock  &bootloader   &trans
+                                     &trans          &trans            &trans          &trans      &trans             &trans
             >;
         };
 
